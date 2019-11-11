@@ -60,11 +60,12 @@ namespace TelaRPS
                     }
                 }
                 MeuCaminho.Close();
+               // ListaNotas.Rows.Clear();
                 MessageBox.Show("Salvo com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
-
+        // carregar as informações para o data grid view
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -75,6 +76,49 @@ namespace TelaRPS
              {"false","3","Denis","2019-08-26","30"},
              {"false","4","Vanessa","2019-07-10","40"},
              {"false","5","JWill","2019-06-15","50"},
+             {"false","6","Carlor","2019-05-20","60"},
+             {"false","7","Roberto","2019-04-01","70"},
+             {"false","1","Hiago","2019-10-31","10"},
+             {"false","2","Wellington","2019-09-28","20"},
+             {"false","3","Denis","2019-08-26","30"},
+             {"false","4","Vanessa","2019-07-10","40"},
+             {"false","5","JWill","2019-06-15","50"},
+             {"false","6","Carlor","2019-05-20","60"},
+             {"false","7","Roberto","2019-04-01","70"},
+             {"false","1","Hiago","2019-10-31","10"},
+             {"false","2","Wellington","2019-09-28","20"},
+             {"false","3","Denis","2019-08-26","30"},
+             {"false","4","Vanessa","2019-07-10","40"},
+             {"false","5","JWill","2019-06-15","50"},
+             {"false","6","Carlor","2019-05-20","60"},
+             {"false","7","Roberto","2019-04-01","70"},
+             {"false","1","Hiago","2019-10-31","10"},
+             {"false","2","Wellington","2019-09-28","20"},
+             {"false","3","Denis","2019-08-26","30"},
+             {"false","4","Vanessa","2019-07-10","40"},
+             {"false","5","JWill","2019-06-15","50"},
+             {"false","6","Carlor","2019-05-20","60"},
+             {"false","7","Roberto","2019-04-01","70"},
+             {"false","1","Hiago","2019-10-31","10"},
+             {"false","2","Wellington","2019-09-28","20"},
+             {"false","3","Denis","2019-08-26","30"},
+             {"false","4","Vanessa","2019-07-10","40"},
+             {"false","5","JWill","2019-06-15","50"},
+             {"false","6","Carlor","2019-05-20","60"},
+             {"false","7","Roberto","2019-04-01","70"},
+             {"false","1","Hiago","2019-10-31","10"},
+             {"false","2","Wellington","2019-09-28","20"},
+             {"false","3","Denis","2019-08-26","30"},
+             {"false","4","Vanessa","2019-07-10","40"},
+             {"false","5","JWill","2019-06-15","50"},
+             {"false","6","Carlor","2019-05-20","60"},
+             {"false","7","Roberto","2019-04-01","70"},
+             {"false","1","Hiago","2019-10-31","10"},
+             {"false","2","Wellington","2019-09-28","20"},
+             {"false","3","Denis","2019-08-26","30"},
+             {"false","4","Vanessa","2019-07-10","40"},
+             {"false","5","JWill","2019-06-15","50"},
+             {"false","6","Carlor","2019-05-20","60"},
              {"false","6","Carlor","2019-05-20","60"},
              {"false","7","Roberto","2019-04-01","70"}
             };
@@ -102,7 +146,7 @@ namespace TelaRPS
             }
 
         }
-
+        // fazer a validação para ativar o botão de gerar o lote
         private void ListaNotas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -150,6 +194,7 @@ namespace TelaRPS
             }
 
         }
+        // botão para contar quantas linhas foram selecionadas
         private void btnlinha_Click(object sender, EventArgs e)
         {
 
@@ -166,7 +211,7 @@ namespace TelaRPS
             if (selecionados > 0) MessageBox.Show(selecionados + " linha(s) selecionada(s)", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-
+        // check para selecionar todas as linhas
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             foreach (DataGridViewRow item in ListaNotas.Rows)
@@ -184,6 +229,10 @@ namespace TelaRPS
             }
         }
 
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
