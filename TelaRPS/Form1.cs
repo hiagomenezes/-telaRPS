@@ -60,8 +60,16 @@ namespace TelaRPS
                     }
                 }
                 MeuCaminho.Close();
-               // ListaNotas.Rows.Clear();
-                MessageBox.Show("Salvo com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               /* DialogResult resposta =*/ MessageBox.Show("Salvo com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                for (int i = ListaNotas.Rows.Count - 1; i >= 0; i--)
+                {
+                    if ((bool)ListaNotas.Rows[i].Cells[0].FormattedValue)
+                    {
+                        ListaNotas.Rows.RemoveAt(i);
+                    }
+                }
+
+
             }
 
         }
@@ -77,50 +85,50 @@ namespace TelaRPS
              {"false","4","Vanessa","2019-07-10","40"},
              {"false","5","JWill","2019-06-15","50"},
              {"false","6","Carlor","2019-05-20","60"},
-             {"false","7","Roberto","2019-04-01","70"},
-             {"false","1","Hiago","2019-10-31","10"},
-             {"false","2","Wellington","2019-09-28","20"},
-             {"false","3","Denis","2019-08-26","30"},
-             {"false","4","Vanessa","2019-07-10","40"},
-             {"false","5","JWill","2019-06-15","50"},
-             {"false","6","Carlor","2019-05-20","60"},
-             {"false","7","Roberto","2019-04-01","70"},
-             {"false","1","Hiago","2019-10-31","10"},
-             {"false","2","Wellington","2019-09-28","20"},
-             {"false","3","Denis","2019-08-26","30"},
-             {"false","4","Vanessa","2019-07-10","40"},
-             {"false","5","JWill","2019-06-15","50"},
-             {"false","6","Carlor","2019-05-20","60"},
-             {"false","7","Roberto","2019-04-01","70"},
-             {"false","1","Hiago","2019-10-31","10"},
-             {"false","2","Wellington","2019-09-28","20"},
-             {"false","3","Denis","2019-08-26","30"},
-             {"false","4","Vanessa","2019-07-10","40"},
-             {"false","5","JWill","2019-06-15","50"},
-             {"false","6","Carlor","2019-05-20","60"},
-             {"false","7","Roberto","2019-04-01","70"},
-             {"false","1","Hiago","2019-10-31","10"},
-             {"false","2","Wellington","2019-09-28","20"},
-             {"false","3","Denis","2019-08-26","30"},
-             {"false","4","Vanessa","2019-07-10","40"},
-             {"false","5","JWill","2019-06-15","50"},
-             {"false","6","Carlor","2019-05-20","60"},
-             {"false","7","Roberto","2019-04-01","70"},
-             {"false","1","Hiago","2019-10-31","10"},
-             {"false","2","Wellington","2019-09-28","20"},
-             {"false","3","Denis","2019-08-26","30"},
-             {"false","4","Vanessa","2019-07-10","40"},
-             {"false","5","JWill","2019-06-15","50"},
-             {"false","6","Carlor","2019-05-20","60"},
-             {"false","7","Roberto","2019-04-01","70"},
-             {"false","1","Hiago","2019-10-31","10"},
-             {"false","2","Wellington","2019-09-28","20"},
-             {"false","3","Denis","2019-08-26","30"},
-             {"false","4","Vanessa","2019-07-10","40"},
-             {"false","5","JWill","2019-06-15","50"},
-             {"false","6","Carlor","2019-05-20","60"},
-             {"false","6","Carlor","2019-05-20","60"},
              {"false","7","Roberto","2019-04-01","70"}
+             //{"false","1","Hiago","2019-10-31","10"},
+             //{"false","2","Wellington","2019-09-28","20"},
+             //{"false","3","Denis","2019-08-26","30"},
+             //{"false","4","Vanessa","2019-07-10","40"},
+             //{"false","5","JWill","2019-06-15","50"},
+             //{"false","6","Carlor","2019-05-20","60"},
+             //{"false","7","Roberto","2019-04-01","70"},
+             //{"false","1","Hiago","2019-10-31","10"},
+             //{"false","2","Wellington","2019-09-28","20"},
+             //{"false","3","Denis","2019-08-26","30"},
+             //{"false","4","Vanessa","2019-07-10","40"},
+             //{"false","5","JWill","2019-06-15","50"},
+             //{"false","6","Carlor","2019-05-20","60"},
+             //{"false","7","Roberto","2019-04-01","70"},
+             //{"false","1","Hiago","2019-10-31","10"},
+             //{"false","2","Wellington","2019-09-28","20"},
+             //{"false","3","Denis","2019-08-26","30"},
+             //{"false","4","Vanessa","2019-07-10","40"},
+             //{"false","5","JWill","2019-06-15","50"},
+             //{"false","6","Carlor","2019-05-20","60"},
+             //{"false","7","Roberto","2019-04-01","70"},
+             //{"false","1","Hiago","2019-10-31","10"},
+             //{"false","2","Wellington","2019-09-28","20"},
+             //{"false","3","Denis","2019-08-26","30"},
+             //{"false","4","Vanessa","2019-07-10","40"},
+             //{"false","5","JWill","2019-06-15","50"},
+             //{"false","6","Carlor","2019-05-20","60"},
+             //{"false","7","Roberto","2019-04-01","70"},
+             //{"false","1","Hiago","2019-10-31","10"},
+             //{"false","2","Wellington","2019-09-28","20"},
+             //{"false","3","Denis","2019-08-26","30"},
+             //{"false","4","Vanessa","2019-07-10","40"},
+             //{"false","5","JWill","2019-06-15","50"},
+             //{"false","6","Carlor","2019-05-20","60"},
+             //{"false","7","Roberto","2019-04-01","70"},
+             //{"false","1","Hiago","2019-10-31","10"},
+             //{"false","2","Wellington","2019-09-28","20"},
+             //{"false","3","Denis","2019-08-26","30"},
+             //{"false","4","Vanessa","2019-07-10","40"},
+             //{"false","5","JWill","2019-06-15","50"},
+             //{"false","6","Carlor","2019-05-20","60"},
+             //{"false","6","Carlor","2019-05-20","60"},
+             //{"false","7","Roberto","2019-04-01","70"}
             };
 
             // Linhas.GetLength(0)comprimento de retorno do primeiro D (7)
@@ -229,10 +237,7 @@ namespace TelaRPS
             }
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 
 }
